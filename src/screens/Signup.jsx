@@ -12,9 +12,10 @@ export default function Signup() {
 
   return (
     <ScreenShell>
-      <div className="content-stretch flex flex-col gap-8 items-start relative shrink-0 w-full">
-        <Header title="BrewMate" />
-        <div className="content-stretch flex flex-col gap-12 items-start px-6 relative shrink-0 w-full">
+      <div className="flex flex-1 flex-col items-start justify-between w-full">
+        <div className="content-stretch flex flex-col gap-8 items-start relative shrink-0 w-full">
+          <Header title="BrewMate" />
+          <div className="content-stretch flex flex-col gap-12 items-start px-6 relative shrink-0 w-full">
           <div className="[word-break:break-word] content-stretch flex flex-col gap-2 items-start relative shrink-0 whitespace-nowrap">
             <p className="font-heading font-bold leading-[1.2] relative shrink-0 text-[24px] text-text-primary">
               Join the Craft
@@ -104,6 +105,7 @@ export default function Signup() {
               </button>
             </div>
           </div>
+        </div>
         </div>
         <div className="content-stretch flex flex-col gap-6 items-center relative shrink-0 w-full px-6 pb-8">
           <p className="[word-break:break-word] font-body font-normal leading-[0] relative shrink-0 text-[14px] text-text-primary whitespace-nowrap">
