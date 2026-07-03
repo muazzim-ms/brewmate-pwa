@@ -1,7 +1,7 @@
 import { useState } from 'react'
-import { Truck, Tag, Clock, Bell } from 'lucide-react'
+import { ArrowLeft, Truck, Tag, Clock, Bell } from 'lucide-react'
+import { useNavigate } from 'react-router-dom'
 import ScreenShell from '../components/ScreenShell.jsx'
-import Header from '../components/Header.jsx'
 import TabBar from '../components/TabBar.jsx'
 
 const FILTERS = [
@@ -76,6 +76,7 @@ const INITIAL_NOTIFICATIONS = [
 const GROUPS = ['Today', 'Yesterday']
 
 export default function Notifications() {
+  const navigate = useNavigate()
   const [notifications, setNotifications] = useState(INITIAL_NOTIFICATIONS)
   const [activeFilter, setActiveFilter] = useState('all')
 
@@ -86,10 +87,17 @@ export default function Notifications() {
 
   return (
     <ScreenShell>
-      <Header title="Notifications" />
-
-      <div className="flex items-center justify-end px-6 pb-1">
-        <button type="button" onClick={markAllRead} className="font-body text-[14px] font-semibold text-brand-accent">
+      <div className="flex h-[60px] shrink-0 items-center gap-3 px-6">
+        <button
+          type="button"
+          onClick={() => navigate(-1)}
+          className="flex size-[36px] shrink-0 items-center justify-center rounded-full bg-surface-muted"
+          aria-label="Go back"
+        >
+          <ArrowLeft size={18} className="text-text-primary" />
+        </button>
+        <p className="font-heading text-[20px] font-bold text-text-primary">Notifications</p>
+        <button type="button" onClick={markAllRead} className="ml-auto whitespace-nowrap font-body text-[14px] font-semibold text-brand-accent">
           Mark all as read
         </button>
       </div>
