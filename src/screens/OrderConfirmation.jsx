@@ -15,7 +15,7 @@ export default function OrderConfirmation() {
           <div className="flex flex-col items-center gap-2 w-full">
             <p className="font-heading text-[32px] font-bold text-text-primary">Order Placed!</p>
             <p className="font-body text-[16px] font-normal text-text-secondary text-center">
-              Your order #BM-20418 has been confirmed and is being prepared.
+              Your order #BR-2847 has been confirmed and is being prepared.
             </p>
           </div>
           <div className="rounded-lg bg-brand-accent px-5 py-[10px]">
