@@ -64,7 +64,7 @@ function Toggle({ checked, onChange, label }) {
       aria-checked={checked}
       aria-label={label}
       onClick={() => onChange(!checked)}
-      className={`relative h-[24px] w-[44px] shrink-0 rounded-full transition-colors ${checked ? 'bg-brand-accent' : 'bg-border-subtle'}`}
+      className={`relative h-[24px] w-[44px] shrink-0 rounded-full transition-colors ${checked ? 'bg-interactive-primary' : 'bg-border-subtle'}`}
     >
       <span
         className={`absolute top-[2px] size-[20px] rounded-full bg-white shadow transition-transform ${
