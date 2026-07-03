@@ -45,7 +45,11 @@ export default function Cart() {
             key={item.id}
             className="flex w-full items-start gap-4 rounded-[20px] bg-white p-3 drop-shadow-[0px_4px_6px_rgba(0,0,0,0.04)]"
           >
-            <div className="size-[80px] shrink-0 rounded-lg bg-gradient-to-br from-brand-accent/25 to-interactive-primary/10" />
+            <img
+              src="/images/cart-item.png"
+              alt={item.name}
+              className="size-[80px] shrink-0 rounded-lg object-cover"
+            />
             <div className="flex min-w-px flex-1 flex-col gap-2">
               <div className="flex w-full items-start justify-between">
                 <div className="flex w-[130px] flex-col gap-[2px]">
