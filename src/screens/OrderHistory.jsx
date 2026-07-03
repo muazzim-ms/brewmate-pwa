@@ -1,3 +1,4 @@
+import { Coffee } from 'lucide-react'
 import { useNavigate } from 'react-router-dom'
 import ScreenShell from '../components/ScreenShell.jsx'
 import TabBar from '../components/TabBar.jsx'
@@ -55,7 +56,9 @@ export default function OrderHistory() {
                 className="flex w-full items-center justify-between text-left"
               >
                 <div className="flex items-center gap-3">
-                  <div className="size-[48px] shrink-0 rounded-lg bg-gradient-to-br from-brand-accent/25 to-interactive-primary/10" />
+                  <div className="flex size-[48px] shrink-0 items-center justify-center rounded-lg bg-gradient-to-br from-brand-accent/25 to-interactive-primary/10">
+                    <Coffee size={24} strokeWidth={2} className="text-brand-accent" />
+                  </div>
                   <div className="flex flex-col gap-[2px]">
                     <p className="font-body text-[12px] font-bold text-text-primary">{order.date}</p>
                     <p className="font-body text-[13px] font-normal text-text-secondary">{order.summary}</p>
