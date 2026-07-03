@@ -10,7 +10,7 @@ export default function Onboarding2() {
       <div className="flex w-full flex-1 flex-col items-start justify-between">
         <div className="flex w-full flex-col items-start">
           <div className="flex h-[450px] w-full items-center justify-center p-6">
-            <div className="size-[320px] shrink-0 rounded-full bg-gradient-to-br from-brand-accent/25 to-interactive-primary/10" />
+            <div className="size-[320px] shrink-0 rounded-full bg-gradient-to-br from-cyan-400/25 to-cyan-600/10" />
           </div>
           <div className="flex w-full flex-col items-center gap-4 px-10 text-center">
             <p
