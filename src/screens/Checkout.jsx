@@ -26,8 +26,8 @@ export default function Checkout() {
             </button>
           </div>
           <div className="flex w-full items-center gap-3 rounded-xl bg-white p-4 drop-shadow-[0px_4px_6px_rgba(0,0,0,0.04)]">
-            <div className="flex size-[40px] shrink-0 items-center justify-center rounded-full bg-surface-muted">
-              <MapPin size={20} className="text-text-primary" />
+            <div className="flex size-[40px] shrink-0 items-center justify-center rounded-full bg-brand-accent">
+              <MapPin size={20} className="text-white" />
             </div>
             <div className="flex min-w-px flex-1 flex-col gap-[2px]">
               <p className="font-body text-[14px] font-bold text-text-primary">Home</p>
