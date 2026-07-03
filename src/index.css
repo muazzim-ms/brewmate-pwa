@@ -1,0 +1,79 @@
+@import url('https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400..800&family=Geist:wght@400;500;600;700;800&family=Inter:wght@400;700;800&display=swap');
+@import "tailwindcss";
+
+/*
+ * Design tokens synced from the Figma file's variable collection
+ * (https://www.figma.com/design/n0Bg5XX9QjoE9wmDcCE47j).
+ *
+ * Naming mirrors Figma's `category/role` variable paths as
+ * `--color-category-role` so tokens can be traced 1:1 back to Figma.
+ * Spacing is NOT redefined here: Figma's spacing/1..spacing/12 variables
+ * (4/8/12/16/20/24/32/48px) are already identical to Tailwind's built-in
+ * numeric spacing scale (space-N = N * 4px), so plain `gap-6`, `px-4`,
+ * etc. already match Figma 1:1 with no extra tokens needed.
+ */
+@theme {
+  --font-heading: 'Bricolage Grotesque', system-ui, sans-serif;
+  --font-body: 'Geist', system-ui, sans-serif;
+  --font-mono-ui: 'Inter', system-ui, sans-serif;
+
+  /* color/text/* */
+  --color-text-primary: #2c1810;
+  --color-text-secondary: #6b5e59;
+  --color-text-placeholder: #a89b96;
+  --color-text-on-primary: #ffffff;
+  --color-text-link: #e2725b;
+
+  /* color/interactive/*, color/brand/* */
+  --color-interactive-primary: #2c1810;
+  --color-brand-accent: #e2725b;
+
+  /* color/background/* */
+  --color-surface: #ffffff;
+  --color-canvas: #fffbf5;
+
+  /* color/border/* */
+  --color-border-strong: #d2b48c;
+
+  /* color/loyalty/* */
+  --color-loyalty-gold: #d2b48c;
+
+  /* color/status/* */
+  --color-status-error: #ef4444;
+
+  /*
+   * Not present in Figma's variable collection (checked 12 nodes across
+   * every screen type) — kept as named tokens anyway for consistency,
+   * since they're real colors used repeatedly in the built screens.
+   */
+  --color-border-subtle: #e5ded9; /* tab-bar / list dividers */
+  --color-surface-muted: #f5efe8; /* icon-button backgrounds (Header) */
+  --color-status-success: #10b981; /* "Delivered" status badges */
+
+  /* radius/* — overrides Tailwind's default md/lg/xl/2xl to match Figma exactly */
+  --radius-md: 8px;
+  --radius-lg: 12px;
+  --radius-xl: 16px;
+  --radius-2xl: 24px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  background: #fffbf5;
+  font-family: var(--font-body);
+  -webkit-font-smoothing: antialiased;
+  overscroll-behavior: none;
+}
+
+#root {
+  min-height: 100dvh;
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
