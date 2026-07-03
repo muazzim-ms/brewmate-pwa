@@ -1,6 +1,7 @@
 import { useNavigate } from 'react-router-dom'
 import { ChevronRight } from 'lucide-react'
 import ScreenShell from '../components/ScreenShell.jsx'
+import onboardingCoffeeImage from '../assets/images/onboarding-1-coffee.png'
 
 export default function Onboarding1() {
   const navigate = useNavigate()
@@ -10,7 +11,11 @@ export default function Onboarding1() {
       <div className="flex w-full flex-1 flex-col items-start justify-between">
         <div className="flex w-full flex-col items-start">
           <div className="flex h-[450px] w-full items-center justify-center p-6">
-            <div className="size-[320px] shrink-0 rounded-full bg-gradient-to-br from-brand-accent/25 to-interactive-primary/10" />
+            <img
+              src={onboardingCoffeeImage}
+              alt=""
+              className="size-[320px] shrink-0 rounded-full object-cover"
+            />
           </div>
           <div className="flex w-full flex-col items-center gap-4 px-10 text-center">
             <p
@@ -25,7 +30,7 @@ export default function Onboarding1() {
           </div>
         </div>
 
-        <div className="flex w-full flex-col items-start gap-8 px-8">
+        <div className="flex w-full flex-col items-start gap-8 px-8 pb-4">
           <div className="flex w-full items-center justify-between">
             <div className="flex items-start gap-2">
               <div className="h-[8px] w-[24px] rounded-[4px] bg-brand-accent" />
