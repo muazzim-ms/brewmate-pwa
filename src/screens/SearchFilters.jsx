@@ -5,6 +5,7 @@ import ScreenShell from '../components/ScreenShell.jsx'
 import Header from '../components/Header.jsx'
 import TabBar from '../components/TabBar.jsx'
 import { menuItems, categories } from '../data/menu.js'
+import saltedCaramelImg from '../assets/salted-caramel.png'
 
 const POPULAR_SEARCHES = ['Iced Latte', 'Flat White', 'Croissant', 'Cold Brew', 'Matcha']
 const PRICE_RANGES = ['RM 0–5', 'RM 5–10', 'RM 10+', '4★+']
@@ -117,7 +118,11 @@ export default function SearchFilters() {
               onKeyDown={(e) => e.key === 'Enter' && navigate(`/menu/${item.id}`)}
               className="flex w-full items-center gap-4 rounded-2xl bg-white p-2 shadow-[0px_4px_6px_rgba(0,0,0,0.04)]"
             >
-              <div className="size-[100px] shrink-0 rounded-xl bg-gradient-to-br from-brand-accent/25 to-interactive-primary/10" />
+              <img
+                src={saltedCaramelImg}
+                alt={item.name}
+                className="size-[100px] shrink-0 rounded-xl object-cover"
+              />
               <div className="flex min-w-0 flex-1 flex-col gap-1">
                 <p className="font-body text-[14px] font-medium text-brand-accent">
                   {categories.find((c) => c.id === item.category)?.name ?? item.category}
